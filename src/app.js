@@ -9,6 +9,7 @@ const staticpath = path.join(__dirname, "../public");
 // const projectpath = path.join(__dirname, "../public/projects.html");
 // const aboutpath = path.join(__dirname, "../public/about.html");
 // const nopath = path.join(__dirname, "../public/404.html");
+
 const template_path = path.join(__dirname, "../templates/views");
 const partialpath = path.join(__dirname, "../templates/partials");
 app.set("view engine", "hbs");
@@ -58,7 +59,7 @@ app.get("*", (req, res) => {
   res.status(404).render("404.hbs", { errorMsg: "ooops! page not found" });
 });
 
-const PORT = 3000;
+const PORT = 4000;
 const IP = "127.0.0.1";
 app.listen(PORT, IP, () => {
   console.log(`Server running at http://${IP}:${PORT}/`);

@@ -35,7 +35,6 @@ const getinfo = async (event) => {
         const tempS = data.weather[0].description;
         const temp = parseInt(kelvintocel(data.main.temp));
         const humidity = data.main.humidity;
-
         tempout.innerHTML = `${temp}ºC`;
         city_nameoutput.innerHTML = `${outname}  ${loc}`;
         tempstatus.innerHTML = `Temp Status : ${tempS}`;
